@@ -1,6 +1,6 @@
 # Soluciones Peña · Sistema de cotizaciones
 
-App web de un solo archivo (`index.html`). Código de acceso inicial: **Pena2026** (se cambia con `node build.js NUEVOCODIGO` desde `index.src.html`).
+App web de un solo archivo (`index.html`). Código de acceso inicial: **101314** (se cambia con `node build.js NUEVOCODIGO` desde `index.src.html`).
 
 ## Uso
 1. Abrir `index.html` o el enlace publicado.
