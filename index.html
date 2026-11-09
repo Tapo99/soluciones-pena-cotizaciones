@@ -635,7 +635,7 @@ function buildQuote(){
    '<tr><td>(-) Renta '+S.cfg.renta+' %</td><td class="r">'+money(T.renta)+'</td></tr>'+
    '<tr><td>(-) IVA retenido '+S.cfg.ret+' %</td><td class="r">'+money(T.ret)+'</td></tr></tbody></table>'+
    '<div class="big-total"><span>TOTAL GENERAL</span><b>'+money(T.total)+'</b></div>'+
-   '<p class="closing">Extendida en Nueva Concepción, Chalatenango, '+fechaLetras(S.fecha)+'. La presente propuesta tiene una vigencia de quince (15) días calendario, contados a partir de la fecha de su recepción.</p>'+
+   '<p class="closing">Extendida en Nueva Concepción, Chalatenango, '+fechaLetras(S.fecha)+'. La presente propuesta tiene una vigencia de quince (15) días calendario, contados a partir de la fecha de su recepción. Cotización elaborada con el inventario de equipos a trabajar proporcionado por la institución.</p>'+
    '<div class="sign"><div class="ln"></div><b>Edgardo Vladimir Peña Orellana</b><span>Propietario</span></div>';
 
   pages.forEach(function(p,i){p.querySelector('.pn').textContent=(i+1)+' / '+pages.length});
