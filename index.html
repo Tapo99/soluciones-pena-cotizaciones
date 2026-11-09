@@ -176,6 +176,7 @@ table.q.cli td:first-child{color:#7A7A7A;width:80px}
     <div id="bar-info" class="muted"></div>
     <div style="display:flex;gap:10px;flex-wrap:wrap">
       <button class="btn" id="btn-allcomp">Usar precio de competencia en todo</button>
+      <button class="btn danger" id="btn-nocomp">Desmarcar todos los precios de la competencia</button>
       <button class="btn primary big" id="btn-gen">Generar cotización</button>
     </div>
   </div>
@@ -474,6 +475,11 @@ document.querySelectorAll('nav.tabs button').forEach(function(b){b.onclick=funct
 $('btn-allcomp').onclick=function(){
   var g=groups(),n=0;AGENCIAS.forEach(function(a){(g[a]||[]).forEach(function(r){if(S.comp[r.key]&&!S.dec[r.key]){S.dec[r.key]={mode:'comp'};n++}})});
   save();render();toast(n+' filas marcadas con precio de la competencia');
+};
+
+$('btn-nocomp').onclick=function(){
+  var n=0;Object.keys(S.dec).forEach(function(k){if(S.dec[k].mode==='comp'){delete S.dec[k];n++}});
+  save();render();toast(n+' precios de la competencia desmarcados');
 };
 
 /* ---------- Excel ---------- */
